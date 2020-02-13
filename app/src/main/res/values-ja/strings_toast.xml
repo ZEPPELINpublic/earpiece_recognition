@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toast_mqtt_init_success">MQTTが正常に開始しました</string>
+    <string name="toast_mqtt_init_error">MQTTの開始エラー！</string>
+
+    <string name="toast_wearer_id_request_success">サーバーから着用者ID受け取り</string>
+    <string name="toast_wearer_id_request_error">サーバーから着用者ID受信エラー！</string>
+
+    <string name="toast_ble_connect_success">BLE接続</string>
+    <string name="toast_ble_connect_error">BLEの接続エラー！</string>
+    <string name="toast_ble_disconnect_success">BLEが切断されました</string>
+    <string name="toast_ble_disconnect_error">BLEの切断エラー！</string>
+
+    <string name="toast_register_detected_ear_feature_success">検出された耳「機能」</string>
+    <string name="toast_register_detected_ear_feature_error">耳「機能」の検出エラー！</string>
+    <string name="format_toast_send_detected_ear_feature_success">機能アップロード。さらに%1$dつ必要！</string>
+    <string name="toast_send_final_detected_ear_feature_success">最後の耳「機能」アップロードした！</string>
+    <string name="toast_send_detected_ear_feature_error">耳の「機能」のアップロードエラー！</string>
+
+    <string name="toast_sensor_data_send_prep_success">センサー送信準備できた</string>
+    <string name="toast_sensor_data_send_prep_error">センサー送信準備エラー！</string>
+    <string name="toast_sensor_data_start_send_success">センサーデータの送信を開始</string>
+    <string name="toast_sensor_data_start_send_error">センサーデータの送信開始エラー！</string>
+    <string name="toast_sensor_data_stop_success">センサーデータの送信を停止しました</string>
+    <string name="toast_sensor_data_stop_error">センサーデータの停止エラー！</string>
+</resources>

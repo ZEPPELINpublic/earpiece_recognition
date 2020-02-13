@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_missing_nec_endpoint_file">NEC backend server endpoint not supplied!  Need to create file "necsdkwrapper/src/main/res/raw/nec_endpoint" containing url provided from NEC!</string>
+    <string name="error_missing_nec_certification_file">NEC certification not supplied!  Need to add file "necsdkwrapper/src/main/res/raw/devicecertandcacertcrt" provided by NEC!</string>
+    <string name="error_missing_nec_secret_key_file">NEC secretkey not supplied!  Need to add file "necsdkwrapper/src/main/res/raw/devicecertkey" provided by NEC!</string>
+
+    <string name="error_edge_id_set_fail">Failed to set Edge ID (needed for communication with NEC backend servers!)</string>
+</resources>

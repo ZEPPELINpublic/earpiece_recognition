@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Non-translatables  -->
+    <string name="label_hearable_device" translatable="false">Hearable Device</string>
+    <string name="label_hearable" translatable="false">HEARABLE</string>
+    <string name="label_welcome" translatable="false">Hands-Free Computing Style</string>
+    <string name="format_edge_id" translatable="false">Edge ID: %1$s</string>
+    <string name="home_title" translatable="false">Hearable Devices</string>
+    <string name="button_ok" translatable="false">OK</string>
+    <string name="format_error_nec_sdk_bluetooth_le_connect" translatable="false">Error (NEC SDK): %1$s</string>
+    <string name="format_voicememo_record_secs" translatable="false">00:%1$02d / 00:%2$02d</string>
+    <string name="voicememo_record_init" translatable="false">--:-- / --:--</string>
+</resources>

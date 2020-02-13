@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="@color/grad_gray_start"
+                android:endColor="@color/grad_gray_end" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/splash_welcome_text"
+            android:gravity="clip_vertical" />
+    </item>
+</layer-list>

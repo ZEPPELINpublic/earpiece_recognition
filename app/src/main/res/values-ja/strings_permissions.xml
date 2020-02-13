@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_rationale_bluetooth">位置情報の許可をしてください</string>
+    <string name="label_permission_rationale_bluetooth_title">この端末とヒアラブルデバイスのBluetooth接続を行ってください</string>
+    <string name="label_permission_rationale_bluetooth_descr">端末の設定画面からヒアラブルデバイスのBluetooth設定を行いペアリングしてください</string>
+    <string name="permission_rationale_camera">QRコードをスキャンするにはアプリにカメラへのアクセスが必要です。もしくはキーボードを使用してください</string>
+    <string name="label_permission_rationale_camera_title">カメラを使用してQRコードをスキャンする</string>
+    <string name="label_permission_rationale_camera_descr">QRコードのスキャンにはカメラの許可が必要です。システム設定で許可してください</string>
+    <string name="permission_rationale_microphone">音声メモを録音するためにマイクの許可をしてください</string>
+    <string name="label_permission_rationale_microphone_title">マイクを使用して音声メモを録音する</string>
+    <string name="label_permission_rationale_microphone_descr">オーディオの録音にはマイクの許可が必要です。システム設定で許可してください</string>
+    <string name="permission_button_ok">OK</string>
+    <string name="permission_rationale_button_ok">OK</string>
+    <string name="permission_rationale_button_cancel">キャンセル</string>
+</resources>

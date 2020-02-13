@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><!--  Ref: https://stackoverflow.com/questions/55545824/disabled-color-state-of-material-button  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="@color/nec_mid_gray" />
+    <item android:color="@color/nec_blue" />
+</selector>

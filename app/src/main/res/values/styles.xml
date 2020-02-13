@@ -1,0 +1,102 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <!--  system top status bar color  -->
+        <item name="android:colorPrimaryDark">@color/nec_light_gray</item>
+        <!--  system bottom button bar color  -->
+        <item name="android:navigationBarColor">@color/nec_light_gray</item>
+    </style>
+
+    <style name="NecScreenTextBase">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/nec_text_dark</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="NecScreenTextTitle" parent="NecScreenTextBase">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NecScreenTextTitleLight" parent="NecScreenTextTitle">
+        <item name="android:textColor">@color/nec_white</item>
+    </style>
+
+    <style name="NecScreenTextDescr" parent="NecScreenTextBase">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="NecScreenTextDetailLarge" parent="NecScreenTextBase">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NecScreenTextDetail" parent="NecScreenTextBase">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NecScreenTextLargeBold" parent="NecScreenTextBase">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NecScreenTextMediumBold" parent="NecScreenTextLargeBold">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="NecTextButton" parent="NecScreenTextBase">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/nec_blue</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="NecTextButtonSmall" parent="NecTextButton">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NecWidgetText">
+        <item name="android:textColor">@color/nec_white</item>
+    </style>
+    <!--    Ref: https://stackoverflow.com/questions/35810614/how-do-i-set-the-disabled-color-of-a-button-with-appcompat/35811157  -->
+    <style name="NecButtonBlue" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/roundrect_blue</item>
+        <item name="backgroundTint">@drawable/button_blue_state_selector</item>
+        <item name="android:textColor">@color/nec_white</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="NecButtonPurple" parent="NecButtonBlue">
+        <item name="backgroundTint">@drawable/button_purple_state_selector</item>
+    </style>
+
+    <style name="NecButtonWhite" parent="NecButtonBlue">
+        <item name="android:background">@drawable/roundrect_white</item>
+        <item name="backgroundTint">@drawable/button_white_state_selector</item>
+        <item name="android:textColor">@color/nec_blue</item>
+    </style>
+
+    <style name="DotsProgressIndicatorView">
+        <item name="minWidth">16dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">16dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+</resources>

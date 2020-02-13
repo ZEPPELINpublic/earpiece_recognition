@@ -1,0 +1,173 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "b526ffdee2fb37ac587230263ef26ac9",
+    "entities": [
+      {
+        "tableName": "nec_hearables_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hearableId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hearableIdStr` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "hearableId",
+            "columnName": "hearableId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hearableIdStr",
+            "columnName": "hearableIdStr",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hearableId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_nec_hearables_table_hearableIdStr",
+            "unique": true,
+            "columnNames": [
+              "hearableIdStr"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_nec_hearables_table_hearableIdStr` ON `${TABLE_NAME}` (`hearableIdStr`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "wearer_ids_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wearerId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wearerIdStr` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "wearerId",
+            "columnName": "wearerId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wearerIdStr",
+            "columnName": "wearerIdStr",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "wearerId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_wearer_ids_table_wearerIdStr",
+            "unique": true,
+            "columnNames": [
+              "wearerIdStr"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wearer_ids_table_wearerIdStr` ON `${TABLE_NAME}` (`wearerIdStr`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "nice_usernames_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`niceUsernameId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `niceUsername` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "niceUsernameId",
+            "columnName": "niceUsernameId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "niceUsername",
+            "columnName": "niceUsername",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "niceUsernameId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_nice_usernames_table_niceUsername",
+            "unique": true,
+            "columnNames": [
+              "niceUsername"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_nice_usernames_table_niceUsername` ON `${TABLE_NAME}` (`niceUsername`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "hearable_wearer_jct_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hearableId` INTEGER NOT NULL, `wearerId` INTEGER NOT NULL, PRIMARY KEY(`hearableId`, `wearerId`))",
+        "fields": [
+          {
+            "fieldPath": "hearableId",
+            "columnName": "hearableId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wearerId",
+            "columnName": "wearerId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hearableId",
+            "wearerId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "hearable_nice_username_jct_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hearableId` INTEGER NOT NULL, `niceUsernameId` INTEGER NOT NULL, PRIMARY KEY(`hearableId`, `niceUsernameId`))",
+        "fields": [
+          {
+            "fieldPath": "hearableId",
+            "columnName": "hearableId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "niceUsernameId",
+            "columnName": "niceUsernameId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hearableId",
+            "niceUsernameId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b526ffdee2fb37ac587230263ef26ac9')"
+    ]
+  }
+}

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ヒアラブルサンプル</string>
+
+    <!--  Welcome (log in or register) screen  -->
+    <string name="button_login">ログイン</string>
+    <string name="button_sign_up">新規登録</string>
+    <string name="label_bluetooth_check_power_title">接続設定</string>
+    <string name="label_bluetooth_check_power_descr">イヤフォンの電源ボタンを4秒間\n長押ししてください。</string>
+    <string name="label_bluetooth_check_power_next_hint">LEDライトが青と緑に交互に点滅したら\n次へボタンを押してください</string>
+    <string name="label_switch_on_method">Bluetooth接続済みの方はこちら</string>
+    <string name="label_power_button">電源ボタン</string>
+    <string name="title_welcome_screen_2_login_flow">電源ボタンを押してください</string>
+    <string name="descr_welcome_screen_2_login_flow">イヤフォンと端末を\nBluetooth接続してください</string>
+
+    <!--    Scan/discover bluetooth devices  -->
+    <string name="title_bluetooth_pairing_tutorial">この端末とデバイスの\nBluetooth接続を行ってください</string>
+    <string name="descr_bluetooth_pairing_tutorial">端末の設定画面からデバイスの\nBluetooth設定を行いペアリングしてください\nペアリングが完了したら次へを押してください</string>
+    <string name="descr_bluetooth_pairing_tutorial_login_flow">端末の設定画面から接続したいデバイスを\n選択してBluetooth接続してください</string>
+
+    <!--    Bluetooth pairable devices screen  -->
+    <string name="bluetooth_pairables_next_button_hint">イヤフォンが表示されない場合はこちら</string>
+
+    <!--    Bluetooth automatic reconnect attempt  -->
+    <string name="bluetooth_attempt_reconnect_title">イヤフォンがスマートフォンと\n接続されているか\n確認しましょう</string>
+    <string name="bluetooth_attempt_reconnect_descr">\nLEDライトが青点滅します。\n点滅したら次へを押してください。</string>
+
+    <!--    Bluetooth connection method select  -->
+    <string name="title_select_device_id_entry_method">イヤフォンとアプリを連携します。\nどちらの方法で連携しますか?</string>
+    <string name="label_enter_via_qrcode">カメラでQRを読み取る</string>
+    <string name="label_enter_via_keyboard">キーボードで入力する</string>
+
+    <!--    Scan QR Code  -->
+    <string name="title_scan_qr_code_prep">QRコードをスマートフォンの\nカメラで読み取ってください</string>
+    <string name="title_scan_qr_code">QRコードを読み取ってください</string>
+    <string name="button_scan_qrcode">カメラを起動</string>
+    <string name="format_qrcode_scan_success">QRコードからスキャンされたヒアラブルID： %1$s</string>
+    <string name="format_qrcode_scan_error">QRコードのスキャンエラー： %1$s</string>
+
+    <!--    Input via keyboard  -->
+    <string name="label_id_enter_via_keyboard_title">デバイスの12桁の文字列を入力してください</string>
+    <string name="hint_12_characters">12桁の文字列</string>
+    <string name="hint_id_enter_via_keyboard">12桁の文字列を入力してください</string>
+    <string name="hint_use_hex_characters">12桁の文字列は「０~9」と「A~F」の英数字で構成されています。</string>
+
+    <!--    Select from available hearable devices  -->
+    <string name="label_select_hearable_from_list_title">あなたのユーザー名を\n選択してください</string>
+    <string name="label_select_hearable_from_list_header">ユーザー名一覧</string>
+
+    <!--  Confirm device ID (for any input method: QR Code, keyboard, list item select)  -->
+    <string name="title_confirm_id">12桁のIDがお手元のヒアラブル\nデバイスのIDと合っているか\n確認しましょう</string>
+    <string name="label_confirm_device_id_pairing_device">ペアリングする機器</string>
+    <string name="button_confirm_id_try_again">もう一度読み取る</string>
+
+    <!--    Enter "nice" username  -->
+    <string name="enter_nice_name_title">ユーザー名を入力してください</string>
+    <string name="enter_nice_name_descr">次回以降ログインする際に\n表示されるユーザー名を入力してください</string>
+    <string name="enter_nice_name_label">ユーザー名を入力</string>
+    <string name="enter_nice_name_hint">ユーザー名を入力してください</string>
+    <string name="button_initiate_connection_to_selected_hearable">接続を開始する</string>
+    <string name="enter_nice_name_error_already_in_use">すでに使用されているユーザー名です</string>
+
+    <!--    Bluetooth pairing  -->
+    <string name="label_progress_checking_bluetooth_paired_n_connected">ペアリングされ接続されたBluetoothの確認</string>
+    <string name="label_progress_bluetooth_connecting">接続中</string>
+    <string name="label_title_please_try_again">もう一度やり直してください</string>
+
+    <!--    Failure  -->
+    <string name="status_hearable_connect_fail">端末接続に失敗</string>
+    <string name="dialog_bluetooth_pairing_failure_title">端末接続に失敗しました</string>
+    <string name="dialog_bluetooth_pairing_failure_descr">下記の内容をご確認してください\n    ・電源が入っているか\n    ・ペアリングモードになっているか\n    ・12桁のIDが一致しているか</string>
+    <string name="dialog_bluetooth_pairing_failure_button_need_help">助けて</string>
+    <string name="bluetooth_pairing_failure_descr">再接続ボタンを押して、再度接続を行ってください</string>
+
+    <!--  Placeholder for Bluetooth not both paired and connected flow -->
+    <string name="title_bluetooth_not_paired_and_connected">接続したいデバイスを\n選択してください</string>
+    <string name="descr_bluetooth_not_paired_and_connected">電源が入っていて、ペアリングモードになっている\n場合はあなたのデバイスが表示されます</string>
+    <string name="list_header_discovered_devices">接続可能なデバイス一覧</string>
+    <string name="button_bluetooth_not_paired_and_connected_device_in_list">接続を開始する</string>
+    <string name="button_bluetooth_not_paired_and_connected_device_not_in_list">デバイスが表示されない場合はこちら</string>
+    <string name="progress_bluetooth_scan_waiting">Bluetoothデバイスのスキャンが完了するのを待っています</string>
+
+    <!--  Placeholder for hearable power, pair, connect tutorial -->
+    <string name="title_bluetooth_power_pair_connect_tutorial">電源、ペアリング、接続のチュートリアル</string>
+    <string name="descr_bluetooth_power_pair_connect_tutorial">ヒアラブルデバイス電源ボタンを長押しして「ペアリング」モードに入ります\nシステムのBluetooth設定に移動し、ペアリングします\nLEDライトが青、青、青に点滅することを確認します</string>
+    <string name="button_bluetooth_power_pair_connect_tutorial_go_to_system_bluetooth_settings">システムのBluetooth設定を開く</string>
+    <string name="button_bluetooth_power_pair_connect_tutorial_try_again">ヒアラブルペアリングが完了して</string>
+
+    <!--    Bluetooth LE connection  -->
+    <string name="status_init_sdk">接続を準備中です</string>
+    <string name="label_initiating_bluetooth_le_title">スマートフォンとイヤフォンを\n接続しています・・・</string>
+    <string name="error_bluetooth_le_timeout">接続がタイムアウトになりました</string>
+    <string name="button_error_try_again">もう一度接続する</string>
+    <string name="title_ble_connect_success">接続完了しました</string>
+
+
+    <!--    Welcome returning user  -->
+    <string name="home_label_battery">電池</string>
+    <string name="home_format_battery">電池: %1$d%%</string>
+    <string name="battery_unknown">電池: ?</string>
+    <string name="home_label_status">ステータス</string>
+    <string name="home_label_sensor">センサー</string>
+    <string name="home_device_not_connected">ヒアラブルが接続されていません</string>
+    <string name="home_sensor_status_prep_init">少しお待ちください</string>
+    <string name="home_sensor_status_prep_ok">サーバーへ送信準備ができました</string>
+    <string name="home_sensor_status_prep_error">データへの送信準備に失敗しました</string>
+    <string name="home_sensor_status_send_ok">正常に作動しています</string>
+    <string name="home_sensor_status_send_error">サーバーへ情報を送信できません</string>
+    <string name="home_sensor_status_stop_send_ok">サーバーへの情報送信を停止しました</string>
+    <string name="home_sensor_status_stop_send_error">サーバーへの情報送信を停止しました</string>
+    <string name="home_hearable_connection_lost_title">ヒアラブルの接続が切断されました。</string>
+    <string name="home_hearable_connection_lost_descr">ヒアラブルの接続が切断されました。 お手数ですが再度お試し下さい。</string>
+
+    <!--  Register ear "feature" tutorial  -->
+    <string name="insert_earpiece_tutorial_title_1of2">あなたの耳を登録しましょう</string>
+    <string name="insert_earpiece_tutorial_title_2of2">まずはイヤフォンを\n耳に入れてみましょう</string>
+    <string name="insert_earpiece_tutorial_descr">耳の形を登録することによりデバイスを\n装着するだけで、個人認証をすることが\nできるようになります。</string>
+    <string name="insert_earpiece_tutorial_button_next">イヤフォンを入れたら次へ</string>
+
+    <!-- Register ear "feature" -->
+    <string name="register_ear_tutorial_title_screen_1">電子音を再生しましょう。\n「電子音を再生」を\nタップしてください。</string>
+    <string name="register_ear_tutorial_title_screen_2">再生中です。\n少しお待ちください。</string>
+    <string name="top_bar_sending">登録中</string>
+    <string name="title_sending">登録中です。\nイヤフォンを外さないでください</string>
+    <string name="register_ear_tutorial_complete_title">良い感じです！\nさらに４回続けて行い、\n耳の形を登録しましょう</string>
+    <string name="dialog_retry_pairing_title">接続画面に戻りますか</string>
+
+    <!-- Registration: next 4 attempts -->
+    <string name="register_ear_next_4_title_playback">イヤフォンを\n外さないでください</string>
+    <string name="register_ear_next_4_complete_title">登録が完了しました。\n認証して実際に使ってみましょう。</string>
+    <string name="register_ear_next_4_incomplete_title">登録がスムーズに進んでいます。\nさらに認証の精度を上げるために\n登録を行いましょう。</string>
+
+    <!--    Registration: additional attempts beyond first 5 (tutorial plus "next 4")  -->
+    <string name="register_ear_additional_incomplete_title">もう一息です。\n登録を続けましょう！</string>
+    <string name="register_ear_additional_complete_top_bar">登録完了</string>
+    <string name="register_ear_additional_complete_button">認証へ</string>
+
+    <!--    Registration: play sound  -->
+    <string name="top_bar_play_sound">電子音を再生する</string>
+    <string name="label_registration_play_sound_title">耳に入れたら電子音を\n再生してください</string>
+    <string name="button_next_registration_play_sound">電子音を再生</string>
+    <string name="top_bar_sound_playing">再生中</string>
+    <string name="button_retry_bluetooth_pairing">ペアリングを再設定</string>
+    <string name="top_bar_sound_playback_complete">完了</string>
+    <string name="label_sound_playback_complete_title">音が鳴り終わったらイヤフォンを\n耳から取り外してください</string>
+    <string name="button_sound_playback_complete">イヤフォンを外したら次へ</string>
+
+    <!--    Registration complete  -->
+    <string name="title_user_verification_complete">正常に認証されました</string>
+    <string name="title_user_verification_fail">認証できませんでした</string>
+    <string name="button_user_verification_fail">再度認証する</string>
+
+    <!--    Verify user  -->
+    <string name="top_bar_verifying_user">認証中</string>
+    <string name="insert_earpiece_verify_user_title_1of2">あなたの耳を認証</string>
+    <string name="insert_earpiece_verify_user_title_2of2">イヤフォンを耳に\n入れてください</string>
+    <string name="insert_earpiece_verify_user_descr">デバイスを耳に入れることで本人認証を行います。\n認証により本人の特定を行うことができます。</string>
+    <string name="insert_earpiece_verify_user_button_next">認証を開始する</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_permission_explain_location">許可が必要です</string>
+    <string name="menu_select_id_method">ID方式選択</string>
+    <string name="menu_qr_code_prep">QRコードの準備</string>
+    <string name="menu_device_id_qr_code_scan">QRコードスキャン</string>
+    <string name="menu_device_id_keyboard_input">デバイスIDエントリ</string>
+
+    <string name="menu_permission_explain_camera">カメラの許可</string>
+    <string name="menu_login_or_register">ログインまたは登録</string>
+    <string name="menu_register_play_sound">音を再生</string>
+    <string name="menu_register_play_sound_final">Play sound final</string>
+    <string name="menu_registration_complete">Registration complete</string>
+
+    <string name="next">次へ</string>
+    <string name="previous">戻る</string>
+
+    <!--    Voice Memo  -->
+    <string name="button_cancel">キャンセル</string>
+    <string name="button_retry">リトライ</string>
+    <string name="voicememo_ready">準備完了</string>
+    <string name="voicememo_recording">録音中</string>
+    <string name="voicememo_recording_complete">録音完了</string>
+    <string name="voicememo_fab_tooltip">こちらをタップするとボイスメモを\n録音することができます</string>
+    <string name="voicememo_dialog_cancel_title">録音をキャンセルしますか</string>
+    <string name="voicememo_dialog_cancel_descr">キャンセルすると音声データが保存されません。よろしいですか？</string>
+    <string name="voicememo_dialog_upload_fail_title">アップロードに失敗しました</string>
+    <string name="voicememo_dialog_upload_fail_descr">録音データをアップロードできませんでした。</string>
+    <string name="voicememo_dialog_recording_fail_title">録音することができません</string>
+    <string name="voicememo_dialog_recording_fail_descr">ネットワークに接続されていないため、録音することができません。ネットワーク接続を確認してください。</string>
+    <string name="voicememo_snackbar_upload_in_progress">サーバーにアップロード中です</string>
+    <string name="voicememo_snackbar_upload_complete">サーバーに保存しました</string>
+</resources>

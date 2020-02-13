@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <integer name="count_register_play_sound_remaining_times">4</integer>
+    <integer name="count_register_play_sound_3_times">3</integer>
+    <integer name="count_verify_play_sound_1_time">1</integer>
+    <integer name="anim_fadeout_millisec">750</integer>
+    <integer name="anim_fast_fade_millisec">150</integer>
+    <integer name="anim_led_pairing_pulse_millisec">200</integer>
+    <integer name="anim_led_paired_pulse_millisec">75</integer>
+    <integer name="anim_led_paired_off_millisec">1900</integer>
+    <!--    Empirically there's a noticeable delay for lottie animations to load; fade them in to avoid "pop"  -->
+    <integer name="lottie_anim_fade_fast_hack_millisec">500</integer>
+    <integer name="lottie_anim_fade_in_hack_millisec">1500</integer>
+
+    <integer name="anim_zoom_keyboard_millisec">750</integer>
+    <fraction name="anim_scale_id_via_keyboard_final">1.75</fraction>
+    <fraction name="lottie_play_sound_scale">0.9</fraction>
+
+    <dimen name="voicememo_slide_panel_height">240dp</dimen>
+    <integer name="voicememo_record_seconds">50</integer>
+    <integer name="voicememo_highlight_last_seconds">10</integer>
+    <integer name="voicememo_fade_millisec">300</integer>
+
+    <dimen name="roundrect_radius">24dp</dimen>
+
+    <dimen name="qrcode_window_size">196dp</dimen>
+    <dimen name="qrcode_window_corner_radius">16dp</dimen>
+    <dimen name="qrcode_window_inset">40dp</dimen>
+    <dimen name="qrcode_corner_icon_size">24dp</dimen>
+    <dimen name="qrcode_corner_icon_offset">-10dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--  Ref: https://stackoverflow.com/questions/32882742/android-how-to-change-size-of-appfabsize-normal-for-floating-action-button  -->
+    <dimen name="design_fab_size_normal" tools:override="true">64dp</dimen>
+    <!--  Ref: https://stackoverflow.com/questions/27484126/adjust-icon-size-of-floating-action-button-fab  -->
+    <dimen name="design_fab_image_size" tools:override="true">48dp</dimen>
+</resources>

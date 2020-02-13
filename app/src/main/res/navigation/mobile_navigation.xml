@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_login_or_register">
+
+    <fragment
+        android:id="@+id/nav_login_or_register"
+        android:name="jp.co.zeppelin.nec.hearable.ui.welcome.LoginOrRegisterFrag"
+        android:label="@string/menu_login_or_register"
+        tools:layout="@layout/frag_login_or_register">
+        <action
+            android:id="@+id/action_nav_login_or_register_to_nav_bluetooth_system_pairing_tutorial"
+            app:destination="@id/nav_bluetooth_system_pairing_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_enter_nice_name"
+        android:name="jp.co.zeppelin.nec.hearable.ui.nicename.NiceNameFrag"
+        android:label="NiceNameFrag"
+        tools:layout="@layout/frag_enter_nice_name">
+        <action
+            android:id="@+id/action_nav_enter_nice_name_to_nav_enter_earpiece_id"
+            app:destination="@id/nav_enter_earpiece_id"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="jp.co.zeppelin.nec.hearable.ui.home.HomeFrag"
+        android:label="@string/menu_home"
+        tools:layout="@layout/frag_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_explain_permission_microphone"
+            app:destination="@id/nav_explain_permission_microphone"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dialog_voicememo_cancel"
+            app:destination="@id/nav_dialog_voicememo_cancel" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dialog_voice_memo_record_error"
+            app:destination="@id/nav_dialog_voice_memo_record_error" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dialog_voice_memo_upload_fail"
+            app:destination="@id/nav_dialog_voice_memo_upload_fail" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dialog_hearable_disconnected"
+            app:destination="@id/nav_dialog_hearable_disconnected" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_list_hearables"
+        android:name="jp.co.zeppelin.nec.hearable.ui.pairing.ListHearablesFrag"
+        android:label="frag_pairable_nec_hearables"
+        tools:layout="@layout/frag_list_hearables">
+        <action
+            android:id="@+id/action_nav_hearables_list_to_nav_qr_code_prep"
+            app:destination="@id/nav_qr_code_prep"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_list_hearables_to_nav_connect_via_ble"
+            app:destination="@id/nav_connect_via_ble"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_list_hearables_to_nav_dialog_hearable_not_both_bt_classic_paired_n_connected"
+            app:destination="@id/nav_dialog_hearable_not_both_bt_classic_paired_n_connected"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_list_hearables_to_nav_hearable_power_pair_connect_tutorial"
+            app:destination="@id/nav_hearable_power_pair_connect_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_connect_via_ble"
+        android:name="jp.co.zeppelin.nec.hearable.ui.bluetooth.ConnectViaBleFrag"
+        android:label="connect via BLE"
+        tools:layout="@layout/frag_bluetooth_discovery">
+        <action
+            android:id="@+id/action_nav_connect_via_ble_to_nav_insert_earpiece_tutorial"
+            app:destination="@id/nav_insert_earpiece_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_connect_via_ble_to_nav_insert_earpiece_verify_user"
+            app:destination="@id/nav_insert_earpiece_verify_user"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_connect_via_ble_to_nav_dialog_hearable_disconnected"
+            app:destination="@id/nav_dialog_hearable_disconnected" />
+        <action
+            android:id="@+id/action_nav_connect_via_ble_to_nav_check_is_paired"
+            app:destination="@id/nav_check_is_paired"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_permission_location_explain"
+        android:name="jp.co.zeppelin.nec.hearable.ui.permissions.ExplainPermissionLocationFrag"
+        android:label="@string/menu_permission_explain_location"
+        tools:layout="@layout/frag_explain_permission_location">
+        <action
+            android:id="@+id/action_nav_permission_location_explain_to_nav_confirm_hearable_id"
+            app:destination="@id/nav_confirm_hearable_id"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_check_is_paired"
+        android:name="jp.co.zeppelin.nec.hearable.ui.pairing.CheckIsPairedFrag"
+        android:label="CheckIsPairedFrag"
+        tools:layout="@layout/frag_bluetooth_reconnect">
+        <action
+            android:id="@+id/action_nav_check_is_paired_to_nav_connect_via_ble"
+            app:destination="@id/nav_connect_via_ble"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_enter_earpiece_id"
+        android:name="jp.co.zeppelin.nec.hearable.ui.EnterEarpieceIdFrag"
+        android:label="@string/menu_select_id_method"
+        tools:layout="@layout/frag_enter_earpiece_id">
+        <action
+            android:id="@+id/action_enterEarpieceIdFrag_to_qrCodeScanPrepFrag"
+            app:destination="@id/nav_qr_code_prep"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_enterEarpieceIdFrag_to_nav_earpiece_id_via_keyboard"
+            app:destination="@id/nav_earpiece_id_via_keyboard"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_qr_code_prep"
+        android:name="jp.co.zeppelin.nec.hearable.ui.earpieceid.qrcode.QrCodeScanPrepFrag"
+        android:label="@string/menu_qr_code_prep"
+        tools:layout="@layout/frag_qr_code_prep">
+        <!--  Note: do not use transition here, will cause weird "double exposure" glitch  -->
+        <action
+            android:id="@+id/action_qrCodeScanPrepFrag_to_qrCodeScanFrag"
+            app:destination="@id/nav_qr_code_scan" />
+        <action
+            android:id="@+id/action_nav_qr_code_prep_to_nav_permission_camera_explain"
+            app:destination="@id/nav_permission_camera_explain"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_permission_camera_explain"
+        android:name="jp.co.zeppelin.nec.hearable.ui.permissions.ExplainPermissionCameraFrag"
+        android:label="@string/menu_permission_explain_camera"
+        tools:layout="@layout/frag_explain_permission_camera">
+        <action
+            android:id="@+id/action_nav_permission_camera_explain_to_nav_qr_code_scan"
+            app:destination="@id/nav_qr_code_scan"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_qr_code_scan"
+        android:name="jp.co.zeppelin.nec.hearable.ui.earpieceid.qrcode.QrCodeScanFrag"
+        android:label="@string/menu_device_id_qr_code_scan"
+        tools:layout="@layout/frag_qr_code_scan">
+        <action
+            android:id="@+id/action_nav_qr_code_scan_to_nav_earpiece_id_via_keyboard"
+            app:destination="@id/nav_earpiece_id_via_keyboard"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_qr_code_scan_to_nav_confirm_hearable_id"
+            app:destination="@id/nav_confirm_hearable_id"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_qr_code_scan_to_nav_qr_code_prep"
+            app:destination="@id/nav_qr_code_prep" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_earpiece_id_via_keyboard"
+        android:name="jp.co.zeppelin.nec.hearable.ui.earpieceid.keyboard.EarpieceIdViaKeyboardFrag"
+        android:label="@string/menu_device_id_keyboard_input"
+        tools:layout="@layout/frag_earpiece_id_via_keyboard">
+        <action
+            android:id="@+id/action_nav_earpiece_id_via_keyboard_to_nav_qr_code_prep"
+            app:destination="@id/nav_qr_code_prep"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_earpiece_id_via_keyboard_to_nav_confirm_hearable_id"
+            app:destination="@id/nav_confirm_hearable_id"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_confirm_hearable_id"
+        android:name="jp.co.zeppelin.nec.hearable.ui.earpieceid.ConfirmHearableIdFrag"
+        android:label="ConfirmHearableIdFrag"
+        tools:layout="@layout/frag_confirm_earpiece_id">
+        <argument
+            android:name="didScanQrCode"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_nav_confirm_hearable_id_to_nav_permission_location_explain"
+            app:destination="@id/nav_permission_location_explain"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_confirm_hearable_id_to_nav_connect_via_ble"
+            app:destination="@id/nav_connect_via_ble"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_confirm_hearable_id_to_nav_dialog_hearable_not_both_bt_classic_paired_n_connected"
+            app:destination="@id/nav_dialog_hearable_not_both_bt_classic_paired_n_connected"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_confirm_hearable_id_to_nav_qr_code_scan"
+            app:destination="@id/nav_qr_code_scan" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_dialog_hearable_not_both_bt_classic_paired_n_connected"
+        android:name="jp.co.zeppelin.nec.hearable.ui.dialog.HearableNotBothBTClassicPairedNConnectedDialog"
+        android:label="HearableNotBothBTClassicPairedNConnectedDialog"
+        tools:layout="@layout/dummy_dialog_retry_pairing">
+        <action
+            android:id="@+id/action_nav_hearable_not_both_bt_classic_paired_n_connected_to_nav_hearable_power_pair_connect_tutorial"
+            app:destination="@id/nav_hearable_power_pair_connect_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_hearable_power_pair_connect_tutorial"
+        android:name="jp.co.zeppelin.nec.hearable.ui.pairing.HearablePowerPairConnectTutorialFrag"
+        android:label="HearablePowerPairConnectTutorialFrag"
+        tools:layout="@layout/frag_check_hearable_power_pair_connect">
+        <action
+            android:id="@+id/action_nav_hearable_power_pair_connect_tutorial_to_nav_bluetooth_system_pairing_tutorial"
+            app:destination="@id/nav_bluetooth_system_pairing_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bluetooth_system_pairing_tutorial"
+        android:name="jp.co.zeppelin.nec.hearable.ui.pairing.BluetoothSystemPairingTutorialFrag"
+        android:label="BluetoothSystemPairingTutorialFrag"
+        tools:layout="@layout/frag_bluetooth_pairing">
+        <argument
+            android:name="doAlreadyKnowHearableId"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_nav_bluetooth_system_pairing_tutorial_to_nav_login_or_register"
+            app:destination="@id/nav_login_or_register"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_bluetooth_system_pairing_tutorial_to_nav_connect_via_ble"
+            app:destination="@id/nav_connect_via_ble"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_bluetooth_system_pairing_tutorial_to_nav_enter_nice_name"
+            app:destination="@id/nav_enter_nice_name"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_bluetooth_system_pairing_tutorial_to_nav_list_hearables"
+            app:destination="@id/nav_list_hearables"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="jp.co.zeppelin.nec.hearable.ui.settings.SettingsFrag"
+        android:label="@string/action_settings"
+        tools:layout="@xml/nec_hearable_preferences" />
+    <action
+        android:id="@+id/action_global_nav_settings"
+        app:destination="@id/nav_settings" />
+
+    <fragment
+        android:id="@+id/nav_insert_earpiece_tutorial"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.InsertEarpieceTutorialFrag"
+        android:label="InsertEarpieceRegisterFrag"
+        tools:layout="@layout/frag_insert_earpiece">
+        <action
+            android:id="@+id/action_nav_insert_earpiece_register_to_registerEarFeatTutorialFrag"
+            app:destination="@id/nav_register_ear_feat_tutorial"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_register_ear_feat_tutorial"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.RegisterEarFeatTutorialFrag"
+        android:label="RegisterEarFeatTutorialFrag"
+        tools:layout="@layout/frag_play_sounds">
+        <action
+            android:id="@+id/action_nav_register_ear_feat_tutorial_to_registerEarFeatTutorialCompleteFrag"
+            app:destination="@id/nav_register_ear_feat_tutorial_complete"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_register_ear_feat_tutorial_complete"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.RegisterEarFeatTutorialCompleteFrag"
+        android:label="RegisterEarFeatTutorialCompleteFrag"
+        tools:layout="@layout/frag_register_ear_tutorial_complete">
+        <action
+            android:id="@+id/action_registerEarFeatTutorialCompleteFrag_to_nav_play_register_sounds_first_six"
+            app:destination="@id/nav_play_register_sounds_next_four"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_play_register_sounds_next_four"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.PlayRegisterSoundsNextFourFrag"
+        android:label="@string/menu_register_play_sound"
+        tools:layout="@layout/frag_play_sounds">
+        <action
+            android:id="@+id/action_nav_play_register_sounds_next_four_to_nav_registration_complete"
+            app:destination="@id/nav_registration_complete"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_play_register_sounds_next_four_to_nav_additional_registration_runs_required"
+            app:destination="@id/nav_additional_registration_runs_required"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_additional_registration_runs_required"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.AdditionalRegistrationRunsRequiredFrag"
+        android:label="AdditionalRegistrationRunsRequiredFrag"
+        tools:layout="@layout/frag_complete_ok">
+        <action
+            android:id="@+id/action_nav_additional_registration_runs_required_to_nav_insert_earpiece_register_continue"
+            app:destination="@id/nav_insert_earpiece_register_continue"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_insert_earpiece_register_continue"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.InsertEarpieceRegisterContinueFrag"
+        android:label="InsertEarpieceRegisterContinueFrag"
+        tools:layout="@layout/frag_insert_earpiece">
+        <action
+            android:id="@+id/action_nav_insert_earpiece_register_continue_to_nav_play_register_sounds_next_three"
+            app:destination="@id/nav_additional_ear_feature_register_attempts"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_additional_ear_feature_register_attempts"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.AdditionalEarFeatureRegisterAttemptsFrag"
+        android:label="@string/menu_register_play_sound_final"
+        tools:layout="@layout/frag_play_sounds">
+        <action
+            android:id="@+id/action_nav_additional_ear_feature_register_attempts_to_nav_registration_complete"
+            app:destination="@id/nav_registration_complete"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_registration_complete"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.RegistrationCompleteFrag"
+        android:label="@string/menu_registration_complete"
+        tools:layout="@layout/frag_complete_ok_anim">
+        <action
+            android:id="@+id/action_nav_registration_complete_to_nav_insert_earpiece_confirm"
+            app:destination="@id/nav_insert_earpiece_verify_user"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_insert_earpiece_verify_user"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.InsertEarpieceVerifyUserFrag"
+        android:label="InsertEarpieceConfirmFrag"
+        tools:layout="@layout/frag_insert_earpiece">
+        <action
+            android:id="@+id/action_nav_insert_earpiece_verify_user_to_nav_verify_user"
+            app:destination="@id/nav_verify_user"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_verify_user"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.VerifyUserFrag"
+        android:label="CheckUserAfterRegisterFrag"
+        tools:layout="@layout/frag_play_sounds">
+        <action
+            android:id="@+id/action_nav_verify_user_to_nav_post_registration_complete"
+            app:destination="@id/nav_verify_user_complete"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_verify_user_to_nav_verify_user_fail"
+            app:destination="@id/nav_verify_user_fail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_verify_user_complete"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.VerifyUserCompleteFrag"
+        android:label="PostRegistrationCompleteFrag"
+        tools:layout="@layout/frag_complete_ok">
+        <action
+            android:id="@+id/action_nav_verify_user_complete_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_verify_user_fail"
+        android:name="jp.co.zeppelin.nec.hearable.ui.register.VerifyUserFailFrag"
+        android:label="PostRegistrationFailFrag"
+        tools:layout="@layout/frag_complete_fail">
+        <action
+            android:id="@+id/action_nav_verify_user_fail_to_nav_verify_user"
+            app:destination="@id/nav_verify_user"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_dialog_voicememo_cancel"
+        android:name="jp.co.zeppelin.nec.hearable.voicememo.VoiceMemoDialogCancelRecording"
+        android:label="VoiceMemoDialogCancelRecording"
+        tools:layout="@layout/dummy_dialog_retry_pairing">
+        <action
+            android:id="@+id/action_nav_dialog_voicememo_cancel_to_nav_home"
+            app:destination="@id/nav_home" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_explain_permission_microphone"
+        android:name="jp.co.zeppelin.nec.hearable.ui.permissions.ExplainPermissionMicrophoneFrag"
+        android:label="ExplainPermissionMicrophoneFrag"
+        tools:layout="@layout/frag_explain_permission_microphone">
+        <action
+            android:id="@+id/action_nav_explain_permission_microphone_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_dialog_voice_memo_record_error"
+        android:name="jp.co.zeppelin.nec.hearable.voicememo.VoiceMemoRecordErrorDialog"
+        android:label="VoiceMemoRecordErrorDialog"
+        tools:layout="@layout/dummy_dialog_retry_pairing">
+        <action
+            android:id="@+id/action_nav_dialog_voice_memo_record_error_to_nav_home"
+            app:destination="@id/nav_home" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_dialog_voice_memo_upload_fail"
+        android:name="jp.co.zeppelin.nec.hearable.voicememo.VoiceMemoUploadFailDialog"
+        android:label="VoiceMemoUploadFailDialog"
+        tools:layout="@layout/dummy_dialog_retry_pairing">
+        <action
+            android:id="@+id/action_nav_dialog_voice_memo_upload_fail_to_nav_home"
+            app:destination="@id/nav_home" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_dialog_hearable_disconnected"
+        android:name="jp.co.zeppelin.nec.hearable.ui.dialog.HearableDisconnectedDialog"
+        android:label="ADialog"
+        tools:layout="@layout/dummy_dialog_retry_pairing">
+        <action
+            android:id="@+id/action_nav_dialog_hearable_disconnected_to_nav_login_or_register"
+            app:destination="@id/nav_login_or_register" />
+    </dialog>
+</navigation>

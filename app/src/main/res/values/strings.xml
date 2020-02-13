@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hearable Sample</string>
+
+    <!--  Welcome (log in or register) screen  -->
+    <string name="button_login">Log in</string>
+    <string name="button_sign_up">Sign up</string>
+    <string name="label_bluetooth_check_power_title">Connection settings</string>
+    <string name="label_bluetooth_check_power_descr">Press and hold the power button\non the earphone for 4 seconds.</string>
+    <string name="label_bluetooth_check_power_next_hint">Press the Next button when the LED light\nflashes alternately blue and green</string>
+    <string name="label_switch_on_method">Click here if you already have a Bluetooth connection</string>
+    <string name="label_power_button">Power button</string>
+    <string name="title_welcome_screen_2_login_flow">Press the power button</string>
+    <string name="descr_welcome_screen_2_login_flow">Please connect the earphone and the terminal with Bluetooth</string>
+
+    <!--    Scan/discover bluetooth devices  -->
+    <string name="title_bluetooth_pairing_tutorial">Make Bluetooth pair connection between hearable and your handset</string>
+    <string name="descr_bluetooth_pairing_tutorial">From handset bluetooth system settings, perform pairing. When pairing is completed, click Next.</string>
+    <string name="descr_bluetooth_pairing_tutorial_login_flow">Select the device you want to connect to from the device setting screen and make a Bluetooth connection</string>
+
+    <!--    Bluetooth pairable devices screen  -->
+    <string name="bluetooth_pairables_next_button_hint">Click here if earphones are not displayed</string>
+
+    <!--    Bluetooth automatic reconnect attempt  -->
+    <string name="bluetooth_attempt_reconnect_title">Check if your earphone is connected to your smartphone via Bluetooth</string>
+    <string name="bluetooth_attempt_reconnect_descr">When the Bluetooth connection is complete, the LED light will blink blue. When it blinks, press Next.</string>
+
+    <!--    Bluetooth connection method select  -->
+    <string name="title_select_device_id_entry_method">Please select method to set earphone ID</string>
+    <string name="label_enter_via_qrcode">Scan QR code with camera</string>
+    <string name="label_enter_via_keyboard">Keyboard</string>
+
+    <!--    Scan QR Code  -->
+    <string name="title_scan_qr_code_prep">Scan QR code with your smartphone camera</string>
+    <string name="title_scan_qr_code">Please scan the QR code</string>
+    <string name="button_scan_qrcode">Start camera</string>
+    <string name="format_qrcode_scan_success">Scanned Hearable ID from QR code: %1$s</string>
+    <string name="format_qrcode_scan_error">Error scanning QR code: %1$s</string>
+
+    <!--    Input via keyboard  -->
+    <string name="label_id_enter_via_keyboard_title">Enter code printed\non earpiece label</string>
+    <string name="hint_12_characters">12 digit string</string>
+    <string name="hint_id_enter_via_keyboard">Please enter a 12 digit string</string>
+    <string name="hint_use_hex_characters">The 12-digit character string consists of alphanumeric characters 0&#8211;9 and A&#8211;F.</string>
+
+    <!--    Select from available hearable devices  -->
+    <string name="label_select_hearable_from_list_title">Select a hearable device to connect</string>
+    <string name="label_select_hearable_from_list_header">Peripheral connectable devices</string>
+
+    <!--  Confirm device ID (for any input method: QR Code, keyboard, list item select)  -->
+    <string name="title_confirm_id">Hearable with a 12-digit ID\nDoes it match the device ID?\nLet\'s check</string>
+    <string name="label_confirm_device_id_pairing_device">Pairing device</string>
+    <string name="button_confirm_id_try_again">Read again</string>
+
+    <!--    Enter "nice" [user]name  -->
+    <string name="enter_nice_name_title">Please enter your username</string>
+    <string name="enter_nice_name_descr">Enter the user name that will be displayed\nthe next time you log in</string>
+    <string name="enter_nice_name_label">Enter username</string>
+    <string name="enter_nice_name_hint">Please enter your username</string>
+    <string name="button_initiate_connection_to_selected_hearable">Initiate connection</string>
+    <string name="enter_nice_name_error_already_in_use">Name already in use</string>
+
+    <!--    Bluetooth pairing  -->
+    <string name="label_progress_checking_bluetooth_paired_n_connected">Checking Bluetooth paired and connected</string>
+    <string name="label_progress_bluetooth_connecting">Connecting&#8230;</string>
+    <string name="label_title_please_try_again">Please try again</string>
+
+    <!--    Failure  -->
+    <string name="status_hearable_connect_fail">Connection failed</string>
+    <string name="dialog_bluetooth_pairing_failure_title">Bluetooth pairing failure</string>
+    <string name="dialog_bluetooth_pairing_failure_descr">Please check the following:\n    ・Is the power turned on?\n    ・ Pairing mode\n    ・Whether the 12-digit ID matches</string>
+    <string name="dialog_bluetooth_pairing_failure_button_need_help">Help me</string>
+    <string name="bluetooth_pairing_failure_descr">Press the \"Reconnect\" button to retry</string>
+
+    <!--  Placeholder for Bluetooth not both paired and connected flow -->
+    <string name="title_bluetooth_not_paired_and_connected">Select the device you want to connect</string>
+    <string name="descr_bluetooth_not_paired_and_connected">Shows your device when powered on and in pairing mode</string>
+    <string name="list_header_discovered_devices">List of connectable devices</string>
+    <string name="button_bluetooth_not_paired_and_connected_device_in_list">Initiate connection</string>
+    <string name="button_bluetooth_not_paired_and_connected_device_not_in_list">Click here if device is not displayed</string>
+    <string name="progress_bluetooth_scan_waiting">Waiting for bluetooth device scan to complete</string>
+
+    <!--  Placeholder for hearable power, pair, connect tutorial -->
+    <string name="title_bluetooth_power_pair_connect_tutorial">Power, pair and connect tutorial</string>
+    <string name="descr_bluetooth_power_pair_connect_tutorial">Long press hearable power button to enter \"pairing\" mode\nGo to system bluetooth settings and pair with hearable\nVerify hearable LED flashes blue-blue-blue</string>
+    <string name="button_bluetooth_power_pair_connect_tutorial_go_to_system_bluetooth_settings">Take me to system bluetooth settings</string>
+    <string name="button_bluetooth_power_pair_connect_tutorial_try_again">Try again after hearable pairing complete</string>
+
+    <!--    Bluetooth LE connection  -->
+    <string name="status_init_sdk">Preparing to connect&#8230;</string>
+    <string name="label_initiating_bluetooth_le_title">Initiating connection&#8230;</string>
+    <string name="error_bluetooth_le_timeout">Connection timed out!</string>
+    <string name="button_error_try_again">Try again</string>
+    <string name="title_ble_connect_success">Connection completed</string>
+
+    <!--    Welcome returning user  -->
+    <string name="home_label_battery">Battery</string>
+    <string name="home_format_battery">Battery: %1$d%%</string>
+    <string name="battery_unknown">Battery: ?</string>
+    <string name="home_label_status">Status</string>
+    <string name="home_label_sensor">Sensor</string>
+    <string name="home_device_not_connected">Hearable not connected!</string>
+    <string name="home_sensor_status_prep_init">Waiting for send command</string>
+    <string name="home_sensor_status_prep_ok">Ready to send information to server</string>
+    <string name="home_sensor_status_prep_error">Failed to prepare sensors to send data</string>
+    <string name="home_sensor_status_send_ok">Sending information to server</string>
+    <string name="home_sensor_status_send_error">Unable to send information to server</string>
+    <string name="home_sensor_status_stop_send_ok">Stopped sending information to server</string>
+    <string name="home_sensor_status_stop_send_error">Error stopping sending information to server</string>
+    <string name="home_hearable_connection_lost_title">Hearable disconnected</string>
+    <string name="home_hearable_connection_lost_descr">Hearable connection lost.  To ensure proper operation it will be necessary to reconnect to hearable and re-verify ear signature.</string>
+
+    <!--  Register ear "feature" tutorial  -->
+    <string name="insert_earpiece_tutorial_title_1of2">Let\'s register your ear!</string>
+    <string name="insert_earpiece_tutorial_title_2of2">First, let\'s put the earphones in your ears</string>
+    <string name="insert_earpiece_tutorial_descr">By registering the shape of the ear, you can perform personal authentication just by wearing the device.</string>
+    <string name="insert_earpiece_tutorial_button_next">Press when earpiece inserted</string>
+
+    <!-- Register ear "feature" -->
+    <string name="register_ear_tutorial_title_screen_1">Let\'s play the electronic sound. Tap \"Play electronic sound\".</string>
+    <string name="register_ear_tutorial_title_screen_2">If you do not hear the beep, you may not have a connection. Perform pairing settings from the device settings.</string>
+    <string name="top_bar_sending">Registering</string>
+    <string name="title_sending">Registering. Do not remove earphones</string>
+    <string name="register_ear_tutorial_complete_title">Looking good! Now just repeat\nfour more times and your\near shape registration will be complete!</string>
+    <string name="dialog_retry_pairing_title">Do you want to return to the connection screen?</string>
+
+    <!-- Registration: next 4 attempts -->
+    <string name="register_ear_next_4_title_playback">Do not remove earphones</string>
+    <string name="register_ear_next_4_complete_title">Registration has been completed. Let\'s authenticate and use it.</string>
+    <string name="register_ear_next_4_incomplete_title">Registration is proceeding smoothly. Let\'s register to further improve the accuracy of authentication.</string>
+
+    <!--    Registration: additional attempts beyond first 5 (tutorial plus "next 4")  -->
+    <string name="register_ear_additional_incomplete_title">Another breath. Continue registering!</string>
+    <string name="register_ear_additional_complete_top_bar">Registration complete</string>
+    <string name="register_ear_additional_complete_button">To verification</string>
+
+    <!--    Registration: play sound  -->
+    <string name="top_bar_play_sound">Play electronic sound</string>
+    <string name="label_registration_play_sound_title">Play sound when inserted in ear</string>
+    <string name="button_next_registration_play_sound">Play electronic sound</string>
+    <string name="top_bar_sound_playing">Playing</string>
+    <string name="button_retry_bluetooth_pairing">Reset pairing</string>
+    <string name="top_bar_sound_playback_complete">Complete</string>
+    <string name="label_sound_playback_complete_title">Remove the earphone from your ear when the sound is finished</string>
+    <string name="button_sound_playback_complete">Next after removing the earphone</string>
+
+    <!--    Registration complete  -->
+    <string name="title_user_verification_complete">Registered successfully</string>
+    <string name="title_user_verification_fail">Authentication failed</string>
+    <string name="button_user_verification_fail">Re-authenticate</string>
+
+    <!--    Verify user  -->
+    <string name="top_bar_verifying_user">Authenticating</string>
+    <string name="insert_earpiece_verify_user_title_1of2">Authenticate your ear</string>
+    <string name="insert_earpiece_verify_user_title_2of2">Insert earpiece</string>
+    <string name="insert_earpiece_verify_user_descr">Authenticate yourself by putting your device in your ear. You can identify yourself and manage your physical condition by authentication.</string>
+    <string name="insert_earpiece_verify_user_button_next">Begin confirmation</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_permission_explain_location">Location permission</string>
+
+    <string name="menu_select_id_method">ID method select</string>
+    <string name="menu_qr_code_prep">QR Code prep</string>
+    <string name="menu_device_id_qr_code_scan">QR Code scan</string>
+    <string name="menu_device_id_keyboard_input">Device ID entry</string>
+    <string name="menu_permission_explain_camera">Camera permission</string>
+    <string name="menu_login_or_register">Log in or register</string>
+    <string name="menu_register_play_sound">Play sound</string>
+    <string name="menu_register_play_sound_final">Play sound final</string>
+    <string name="menu_registration_complete">Registration complete</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!--    Voice Memo  -->
+    <string name="button_cancel">Cancel</string>
+    <string name="button_retry">Retry</string>
+    <string name="voicememo_ready">Ready</string>
+    <string name="voicememo_recording">Recording</string>
+    <string name="voicememo_recording_complete">Recording completed</string>
+    <string name="voicememo_fab_tooltip">Tap here to record a voice memo</string>
+    <string name="voicememo_dialog_cancel_title">Do you want to cancel the recording</string>
+    <string name="voicememo_dialog_cancel_descr">If you cancel, audio data will not be saved. Are you sure?</string>
+    <string name="voicememo_dialog_upload_fail_title">Upload failed</string>
+    <string name="voicememo_dialog_upload_fail_descr">Could not upload recording</string>
+    <string name="voicememo_dialog_recording_fail_title">Unable to record</string>
+    <string name="voicememo_dialog_recording_fail_descr">You cannot record because you are not connected to the network. Check your network connection.</string>
+    <string name="voicememo_snackbar_upload_in_progress">Uploading to server</string>
+    <string name="voicememo_snackbar_upload_complete">Saved on server</string>
+</resources>

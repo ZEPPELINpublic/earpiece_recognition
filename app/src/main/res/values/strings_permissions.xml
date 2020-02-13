@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_rationale_bluetooth">Location permission required for bluetooth (this app can\'t do anything without bluetooth)</string>
+    <string name="label_permission_rationale_bluetooth_title">Connect device to earpiece via Bluetooth</string>
+    <string name="label_permission_rationale_bluetooth_descr">Bluetooth requires location permission, please grant in system settings</string>
+    <string name="permission_rationale_camera">App needs camera access to scan QR codes, please grant or use keyboard flow instead</string>
+    <string name="label_permission_rationale_camera_title">Use camera to scan QR code</string>
+    <string name="label_permission_rationale_camera_descr">QR code scanning requires camera permission, please grant in system settings</string>
+    <string name="permission_rationale_microphone">App needs microphone to record Voice Memos</string>
+    <string name="label_permission_rationale_microphone_title">Use microphone to record Voice Memos</string>
+    <string name="label_permission_rationale_microphone_descr">Recording audio requires microphone permission, please grant in system settings</string>
+    <string name="permission_button_ok">OK</string>
+    <string name="permission_rationale_button_ok">OK</string>
+    <string name="permission_rationale_button_cancel">Cancel</string>
+</resources>

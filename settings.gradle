@@ -1,0 +1,25 @@
+rootProject.name='NecHearWearable'
+
+// Classic "domain" layer: ideally pojos only (but in practice may also contain utils/helpers);
+// avoid android dependencies
+include ':domain'
+
+// Isolate 3rd party QR code scanner in separate module (hide implementation details as per
+// "clean" architecture)
+include ':qrcodescan'
+
+// NEC hearable SDK
+include ':hearable-sdk'
+
+// Wrapper around NEC SDK, including bluetooth helpers
+include ':necsdkwrapper'
+
+// Private AAC/Jetpack "Room" DB, exposed only via "data" repository-pattern module below
+include ':dbimplroom'
+
+// Classic "data" (repository pattern) layer, abstraction for app layer consumption which hides
+// implementation details
+include ':data'
+
+// Main app module
+include ':app'

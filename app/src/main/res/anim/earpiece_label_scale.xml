@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    'p' means parent view  e.g. "50%p" is 50% of parent view -->
+    <scale
+        android:fromXScale="1"
+        android:fromYScale="1"
+        android:toXScale="@fraction/anim_scale_id_via_keyboard_final"
+        android:toYScale="@fraction/anim_scale_id_via_keyboard_final"
+        android:duration="@integer/anim_zoom_keyboard_millisec"
+        android:pivotX="50%p"
+        android:pivotY="50%" />
+</set>

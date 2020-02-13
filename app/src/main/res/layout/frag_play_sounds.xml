@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_theme_gray"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTopBar"
+        style="@style/NecScreenTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/nec_blue"
+        android:text="@string/top_bar_play_sound"
+        android:textColor="@color/nec_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLabelTitle"
+        style="@style/NecScreenTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:lines="4"
+        android:text="@string/label_registration_play_sound_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTopBar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/four_dots_empty"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_hDots"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_hDots" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottiePlaySound"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleX="@fraction/lottie_play_sound_scale"
+        android:scaleY="@fraction/lottie_play_sound_scale"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_authentication_one_shot" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSendFeatureToServer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleX="@fraction/lottie_play_sound_scale"
+        android:scaleY="@fraction/lottie_play_sound_scale"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_authentication_one_shot" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieFeatureSentToServer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleX="@fraction/lottie_play_sound_scale"
+        android:scaleY="@fraction/lottie_play_sound_scale"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_authentication_one_shot" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieInsertEarpiece2of2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleX="@fraction/lottie_play_sound_scale"
+        android:scaleY="@fraction/lottie_play_sound_scale"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineH_lottieBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_11_insert_earphones"
+        tools:alpha="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH_lottieBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.025" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutLoadingIndicator"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/wait_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewButtonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/button_next_registration_play_sound"
+        android:textColor="@color/nec_white"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutLoadingIndicator" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadingIndicator"
+        style="@style/DotsProgressIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutLoadingIndicator"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutLoadingIndicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

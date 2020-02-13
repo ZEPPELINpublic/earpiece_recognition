@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_missing_nec_endpoint_file">NECバックエンドサーバーエンドポイントが提供されていません！ NECから提供されたURLを含むファイル「necsdkwrapper/src/main/res/raw/nec_endpoint」を作成する必要があります。</string>
+    <string name="error_missing_nec_certification_file">NEC認証は提供されていません！ NECが提供するファイル「necsdkwrapper/src/main/res/raw/devicecertandcacertcrt」を追加する必要があります！</string>
+    <string name="error_missing_nec_secret_key_file">NEC秘密鍵は提供されていません！ NECが提供するファイル「necsdkwrapper/src/main/res/raw/devicecertkey」を追加する必要があります！</string>
+
+    <string name="error_edge_id_set_fail">Edge IDの設定に失敗しました（NECバックエンドサーバーとの通信に必要です！）</string>
+</resources>

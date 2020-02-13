@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.co.zeppelin.nec.hearable.necsdkwrapper">
+    <!--  (c) 2020 Zeppelin Inc., Shibuya, Tokyo JAPAN  -->
+
+    <!--
+    app is available to BLE-capable devices only
+    Ref: https://developer.android.com/guide/topics/connectivity/bluetooth-le
+-->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <!--    Ref: https://developer.android.com/guide/topics/connectivity/bluetooth
+            BLUETOOTH needed for performing any Bluetooth communication, such as
+            * requesting a connection
+            * accepting a connection
+            * transferring data
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!--    Ref: https://developer.android.com/guide/topics/connectivity/bluetooth
+            BLUETOOTH_ADMIN mandatory if app needs to
+            * initiate device discovery
+            * manipulate Bluetooth settings
+            (Most applications need this permission solely for the ability to discover local Bluetooth devices)
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--    Ref: https://developer.android.com/guide/topics/connectivity/bluetooth
+            Bluetooth requires location permission because Bluetooth scan can be used to
+            gather information about the location of the user
+            Ref: https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-hardware-id
+            To access the hardware identifiers of nearby external devices via Bluetooth and Wi-Fi scans,
+            your app must now have the ACCESS_FINE_LOCATION or ACCESS_COARSE_LOCATION permissions
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--    VoiceMemo feature  -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="com.nec.Android.hearable.permission.HEARABLE_SERVICE" />
+
+</manifest>

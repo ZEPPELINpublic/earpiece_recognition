@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/gradient_theme_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hEarpiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/imageViewEarpieceLabel"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleX="1.75"
+        android:scaleY="1.75"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_hEarpiece"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hearable_id_check_full" />
+
+    <ImageView
+        android:id="@+id/imageViewEarpieceLabelHighlightRect"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleX="1.75"
+        android:scaleY="1.75"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_hEarpiece"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hearable_id_check_highlight_rect_full" />
+
+    <TextView
+        android:id="@+id/textViewLabelSwitchOnEarpiece"
+        style="@style/NecScreenTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/title_confirm_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBg" />
+
+    <TextView
+        android:id="@+id/textViewLabelIdBox"
+        style="@style/NecScreenTextDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_confirm_device_id_pairing_device"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelSwitchOnEarpiece" />
+
+    <View
+        android:id="@+id/viewDeviceIdBox"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/roundrect_confirm_device_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelIdBox" />
+
+    <TextView
+        android:id="@+id/textViewLabelHearableDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_hearable_device"
+        app:layout_constraintStart_toStartOf="@+id/viewDeviceIdBox"
+        app:layout_constraintTop_toTopOf="@+id/viewDeviceIdBox" />
+
+    <TextView
+        android:id="@+id/textViewHearableDeviceId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="123456789012"
+        style="@style/NecScreenTextDescr"
+        app:layout_constraintStart_toStartOf="@+id/textViewLabelHearableDevice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelHearableDevice" />
+
+    <TextView
+        android:id="@+id/textViewButtonRescanQrCode"
+        style="@style/NecTextButtonSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/button_confirm_id_try_again"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+        app:layout_constraintEnd_toEndOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="@+id/buttonNext" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/NecButtonBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/button_initiate_connection_to_selected_hearable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

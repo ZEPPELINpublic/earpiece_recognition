@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toast_mqtt_init_success">MQTT started successfully</string>
+    <string name="toast_mqtt_init_error">Error starting MQTT!</string>
+
+    <string name="toast_wearer_id_request_success">Received wearer ID from server</string>
+    <string name="toast_wearer_id_request_error">Error receiving wearer ID from server!</string>
+
+    <string name="toast_ble_connect_success">BLE connected</string>
+    <string name="toast_ble_connect_error">Error connecting BLE!</string>
+    <string name="toast_ble_disconnect_success">BLE disconnected</string>
+    <string name="toast_ble_disconnect_error">Error disconnecting BLE!</string>
+
+    <string name="toast_register_detected_ear_feature_success">Detected ear \"feature\"</string>
+    <string name="toast_register_detected_ear_feature_error">Error detecting ear \"feature\"!</string>
+    <string name="format_toast_send_detected_ear_feature_success">Uploaded ear \"feature\", need %1$d more!</string>
+    <string name="toast_send_final_detected_ear_feature_success">Uploaded final ear \"feature\"!</string>
+    <string name="toast_send_detected_ear_feature_error">Error uploading ear \"feature\"!</string>
+
+    <string name="toast_sensor_data_send_prep_success">Sensors ready to send data</string>
+    <string name="toast_sensor_data_send_prep_error">Error preparing sensors to send data!</string>
+    <string name="toast_sensor_data_start_send_success">Started sending sensor data</string>
+    <string name="toast_sensor_data_start_send_error">Error starting to send sensor data!</string>
+    <string name="toast_sensor_data_stop_success">Stopped sending sensor data</string>
+    <string name="toast_sensor_data_stop_error">Error stopping sensor data!</string>
+</resources>
