@@ -1,6 +1,11 @@
 package jp.co.zeppelin.nec.hearable
 
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.PowerManager
+import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -16,6 +21,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import jp.co.zeppelin.nec.hearable.domain.helpers.ZepLog
+import jp.co.zeppelin.nec.hearable.service.HearableFgService
 import jp.co.zeppelin.nec.hearable.ui.vm.ViewModelCommon
 import jp.co.zeppelin.nec.hearable.ui.vm.ViewModelCommonFactory
 import pub.devrel.easypermissions.EasyPermissions
@@ -51,9 +57,21 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private fun enableBackgroundRunning() {
+        val powerManager = getSystemService(PowerManager::class.java)
+        if (!powerManager.isIgnoringBatteryOptimizations(packageName)) {
+            val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+            intent.data = Uri.parse("package:$packageName")
+            startActivity(intent)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme_NoActionBar)
         super.onCreate(savedInstanceState)
+
+        enableBackgroundRunning()
+
         setContentView(R.layout.activity_main)
 
         val viewModelFactory =
@@ -106,5 +124,16 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onDestroy() {
+        val stopIntent = Intent(this@MainActivity, HearableFgService::class.java)
+        stopIntent.action = HearableFgService.ACTION_STOP_FG_SERVICE
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(stopIntent)
+        } else {
+            startService(stopIntent)
+        }
+        super.onDestroy()
     }
 }

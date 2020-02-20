@@ -10,4 +10,7 @@
     <string name="format_error_nec_sdk_bluetooth_le_connect" translatable="false">Error (NEC SDK): %1$s</string>
     <string name="format_voicememo_record_secs" translatable="false">00:%1$02d / 00:%2$02d</string>
     <string name="voicememo_record_init" translatable="false">--:-- / --:--</string>
+
+    <string name="notification_name" translatable="false">notification_name</string>
+
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    When styling via .setStyle(NotificationCompat.DecoratedCustomViewStyle()),
+    the layout will be placed within a frame that already has margins, so no
+    top-level margins necessary in here
+
+    Note: ConstraintLayout not supported for RemoteViews, fall back to legacy layouts
+    Refs:
+        https://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@mipmap/ic_launcher_round" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/imageViewIcon"
+        android:layout_centerVertical="true"
+        >
+
+        <TextView
+            android:id="@+id/textViewFgServiceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/textViewFgServiceDescr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_sensor_status_send_ok" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_state"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="STATES"-->
+<!--            android:textSize="16sp" -->
+<!--            />-->
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonFgServiceStopSendingSensorData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_stop_sending_sensor_data"
+        android:textAllCaps="false"
+        style="@style/NecButtonBlue"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        >
+    </Button>
+</RelativeLayout>

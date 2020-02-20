@@ -1,4 +1,4 @@
-# nec_hearable_android
+# ZEPPELINpublic/earpiece_recognition
 Android app for connecting to NEC Heararable hardware
 
 ## Quick start

@@ -1,7 +1,9 @@
 package jp.co.zeppelin.nec.hearable.ui.home
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -23,6 +25,7 @@ import jp.co.zeppelin.nec.hearable.domain.model.BluetoothTargetDeviceFound
 import jp.co.zeppelin.nec.hearable.helper.AlertHelper
 import jp.co.zeppelin.nec.hearable.helper.BatteryHelper
 import jp.co.zeppelin.nec.hearable.necsdkwrapper.model.*
+import jp.co.zeppelin.nec.hearable.service.HearableFgService
 import jp.co.zeppelin.nec.hearable.ui.vm.BaseVmFrag
 import jp.co.zeppelin.nec.hearable.voicememo.model.VoiceMemoRecordProgress
 import jp.co.zeppelin.nec.hearable.voicememo.model.VoiceMemoRecordTimeout
@@ -559,8 +562,16 @@ class HomeFrag : BaseVmFrag() {
         viewModel.startBluetoothLeDiscovery()
     }
 
-    override fun onStop() {
-        viewModel.stopSendSensorData()
-        super.onStop()
+    override fun onStart() {
+        super.onStart()
+        activity?.run {
+            val startIntent = Intent(this, HearableFgService::class.java)
+            startIntent.action = HearableFgService.ACTION_START_FG_SERVICE
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(startIntent)
+            } else {
+                startService(startIntent)
+            }
+        } ?: throw Exception("onStart(): ERROR: Invalid Activity")
     }
 }

@@ -110,6 +110,8 @@
     <string name="home_hearable_connection_lost_title">Hearable disconnected</string>
     <string name="home_hearable_connection_lost_descr">Hearable connection lost.  To ensure proper operation it will be necessary to reconnect to hearable and re-verify ear signature.</string>
 
+    <string name="button_stop_sending_sensor_data">Stop sending</string>
+
     <!--  Register ear "feature" tutorial  -->
     <string name="insert_earpiece_tutorial_title_1of2">Let\'s register your ear!</string>
     <string name="insert_earpiece_tutorial_title_2of2">First, let\'s put the earphones in your ears</string>

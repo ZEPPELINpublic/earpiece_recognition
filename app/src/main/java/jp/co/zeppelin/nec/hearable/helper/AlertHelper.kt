@@ -15,8 +15,8 @@ object AlertHelper {
     // In response to NEC request to diable all toasts (7 Feb 2020)
     const val DO_ENABLE_TOASTS = false
 
-    fun makeToast(context: Context?, msg: String) = context.apply {
-        if (DO_ENABLE_TOASTS && msg.isNotEmpty()) {
+    fun makeToast(context: Context?, msg: String, doForceShowToast: Boolean= DO_ENABLE_TOASTS) = context.apply {
+        if (doForceShowToast && msg.isNotEmpty()) {
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
         }
     }

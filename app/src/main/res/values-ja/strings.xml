@@ -111,6 +111,8 @@
     <string name="home_hearable_connection_lost_title">ヒアラブルの接続が切断されました。</string>
     <string name="home_hearable_connection_lost_descr">ヒアラブルの接続が切断されました。 お手数ですが再度お試し下さい。</string>
 
+    <string name="button_stop_sending_sensor_data">送信を停止</string>
+
     <!--  Register ear "feature" tutorial  -->
     <string name="insert_earpiece_tutorial_title_1of2">あなたの耳を登録しましょう</string>
     <string name="insert_earpiece_tutorial_title_2of2">まずはイヤフォンを\n耳に入れてみましょう</string>
